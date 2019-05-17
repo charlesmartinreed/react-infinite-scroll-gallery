@@ -1,0 +1,25 @@
+{
+  "name": "infinite-scroll-unsplash-gallery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:charlesmartinreed/react-infinite-scroll-gallery.git",
+  "author": "charlesmartinreed <charlesmartinreed@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-register": "^6.26.0",
+    "concurrently": "^4.1.0",
+    "express": "^4.17.0",
+    "node-fetch": "^2.6.0",
+    "universal-config": "^0.3.0",
+    "unsplash-js": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
+  "scripts": {
+    "start": "yarn server",
+    "server": "nodemon server",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+  }
+}
