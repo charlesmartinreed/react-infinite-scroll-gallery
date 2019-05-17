@@ -17,7 +17,7 @@ const app = express();
 app.get("/api/photos", (req, res) => {
   // start at 1st photo, get 30
   unsplash.photos
-    .listPhotos(1, 30)
+    .listPhotos(req.query.start, req.query.count)
     .then(toJson)
     .then(json => res.json(json));
 });
